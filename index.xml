@@ -6,13 +6,13 @@
     <description>Recent content on Trade Offs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 May 2021 12:04:40 +0000</lastBuildDate><atom:link href="https://trade-offs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 May 2021 00:04:40 +0000</lastBuildDate><atom:link href="https://trade-offs.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TDD Part 1 - The Unfulfilled promise</title>
-      <link>https://trade-offs.github.io/post/hello_world/</link>
-      <pubDate>Wed, 26 May 2021 12:04:40 +0000</pubDate>
+      <link>https://trade-offs.github.io/post/tdd_unfulfilled_promise/</link>
+      <pubDate>Tue, 25 May 2021 00:04:40 +0000</pubDate>
       
-      <guid>https://trade-offs.github.io/post/hello_world/</guid>
+      <guid>https://trade-offs.github.io/post/tdd_unfulfilled_promise/</guid>
       <description>Why is TDD still mandated and not practised in most of the teams/organizations ground up?
 A typical experience is that teams practise this for some time (six months to a year) and then give up on it. This shouldn&amp;rsquo;t be happening, as the whole premise was that once the team starts doing TDD, they will see the benefits and would never go back.
 What’s the reason for this peculiar phenomenon? In my experience, it&amp;rsquo;s down to the benefits which were promised but never materialized for the individuals or teams.</description>
