@@ -13,9 +13,9 @@
       <pubDate>Tue, 25 May 2021 00:04:40 +0000</pubDate>
       
       <guid>https://trade-offs.github.io/post/tdd_unfulfilled_promise/</guid>
-      <description>There are few things that divide the software community as much as the practice of Test Driven Development. While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
+      <description>There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
 So what is it about TDD that elicits such divisive opinions?
-Also why is it that a lot of teams/organizations which enthusiastically start off on the TDD journey, latching on to its benefits early on, completely abandon and give up on it at a later stage (typically six months to a year).</description>
+In our experience, it&amp;rsquo;s down to the benefits promised in theory but difficult to materialize in practice!</description>
     </item>
     
   </channel>

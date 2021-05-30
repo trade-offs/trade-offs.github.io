@@ -29,25 +29,25 @@
     
     
     <meta property="og:title" content="TDD - The Unfulfilled Promise" />
-<meta property="og:description" content="There are few things that divide the software community as much as the practice of Test Driven Development. While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
+<meta property="og:description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
 So what is it about TDD that elicits such divisive opinions?
-Also why is it that a lot of teams/organizations which enthusiastically start off on the TDD journey, latching on to its benefits early on, completely abandon and give up on it at a later stage (typically six months to a year)." />
+In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://trade-offs.github.io/post/tdd_unfulfilled_promise/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-05-25T00:04:40&#43;00:00" />
 <meta property="article:modified_time" content="2021-05-25T00:04:40&#43;00:00" />
 
 <meta itemprop="name" content="TDD - The Unfulfilled Promise">
-<meta itemprop="description" content="There are few things that divide the software community as much as the practice of Test Driven Development. While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
+<meta itemprop="description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
 So what is it about TDD that elicits such divisive opinions?
-Also why is it that a lot of teams/organizations which enthusiastically start off on the TDD journey, latching on to its benefits early on, completely abandon and give up on it at a later stage (typically six months to a year)."><meta itemprop="datePublished" content="2021-05-25T00:04:40&#43;00:00" />
+In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!"><meta itemprop="datePublished" content="2021-05-25T00:04:40&#43;00:00" />
 <meta itemprop="dateModified" content="2021-05-25T00:04:40&#43;00:00" />
-<meta itemprop="wordCount" content="805">
+<meta itemprop="wordCount" content="895">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TDD - The Unfulfilled Promise"/>
-<meta name="twitter:description" content="There are few things that divide the software community as much as the practice of Test Driven Development. While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
+<meta name="twitter:description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
 So what is it about TDD that elicits such divisive opinions?
-Also why is it that a lot of teams/organizations which enthusiastically start off on the TDD journey, latching on to its benefits early on, completely abandon and give up on it at a later stage (typically six months to a year)."/>
+In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!"/>
 
 	
 
@@ -159,56 +159,78 @@ Also why is it that a lot of teams/organizations which enthusiastically start of
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy roboto f5 nested-links nested-img mid-gray pr4-l w-100-l"><p>There are few things that divide the software community as much as the practice of Test Driven Development.
+    <div class="nested-copy-line-height lh-copy roboto f5 nested-links nested-img mid-gray pr4-l w-100-l"><p>There are few things that divide the software community as much as the practice of Test Driven Development (TDD).
 While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.</p>
 <p><img src="/images/tdd_search.png" alt="https://www.google.com/search?q=test+driven+development+is&safe=strict" title="TDD - Search Google"></p>
 <p>So what is it about TDD that elicits such divisive opinions?</p>
-<p>Also why is it that a lot of teams/organizations which enthusiastically start off on the TDD journey, latching on to its benefits early on, completely abandon and give up on it at a later stage (typically six months to a year).</p>
-<p>In our experience, it&rsquo;s down to the benefits which were promised in principle but which never materialized in practice!</p>
-<p>Let’s look at it in greater detail.</p>
-<p>One of the biggest challenges faced by the team is the inability to maintain the test suite over the life cycle of the project. In the beginning, with few tests and a small code base, tdd seems to be working and teams thought they were on the right track. Over time some common issues occur which makes the whole premise of the said benefits questionable.</p>
-<p>So what are these problems?</p>
+<p>In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!</p>
+<p>Before we delve into the challenges around making TDD work in a team, lets look at some of those promised benefits.</p>
+<h2 id="the-promise">The Promise</h2>
 <ul>
-<li><strong>Trigger to write new Tests</strong>:Trigger to write a new test should never be a new class or a new method. It should always be a new requirement.
-Tests should always talk about what is required to happen and not how it happens. It&rsquo;s called unit testing and hence test should be at unit level and not on class and method level.Failure to adhere to this philosophy leads to tight coupling between tests and the code.Think about unit under test and what&rsquo;s the contract of your unit with the rest of the codebase and then test that contract.</li>
+<li>
+<p><strong>Clean design</strong>: The proponents of TDD promise a cleaner, modular and maintainable code base if practiced rightly.</p>
+</li>
+<li>
+<p><strong>Fast Feedback Loops</strong>: Immediate, precise &amp; binary feedback is an inherent benefit of the TDD practice.</p>
+</li>
+<li>
+<p><strong>Code Refactoring</strong>: Another promise is the built in test safety net which gives one the confidence to refactor with ease.</p>
+</li>
+<li>
+<p><strong>Tests as documentation</strong>: Tests serve as a living documentation of the code base.</p>
+</li>
+<li>
+<p><strong>Reducing cognitive overload</strong>: The promise is that a simple iterative and incremental dev cycle goes a long way in reducing dev anxiety.</p>
+</li>
 </ul>
-<blockquote>
-<p>Test the public API of your Unit.</p>
-</blockquote>
+<p>All of these look like much desired and coveted outcomes and should have ideally led to stickiness in following this methodology, for all practising teams. However, what we have seen is that a lot of teams which enthusiastically start off on the TDD journey, completely abandon and give up on it at a later stage (typically six months to a year).</p>
+<p>One of the biggest challenges around TDD, is the inability to maintain the test suite over the entire life cycle of the project. At the beginning, when the code base is small and there are fewer tests, it seems to work well and teams think they are on the right track. However, over a period of time, they run into common pitfalls which make them question the very benefits that TDD espoused, in the first place.</p>
+<h2 id="the-pitfalls">The Pitfalls</h2>
 <ul>
 <li>
-<p><strong>Intent of the Test</strong>: Yes, the tests failed, but it’s really hard to understand the intent of those tests and hence no real value add in case of failures. What’s under test is not easy to understand and it defeats the whole purpose of having tests in the first place.</p>
+<p><strong>Alignment to TDD philosophy</strong>: TDD is a team sport and everyone in the team needs to be fully committed to the philosophy of writing tests first and doing continuous refactoring. Even one member, not adhering to these principles, can create problems for the entire team. Also, the problem compounds when a lot of developers get influenced by vanity metrics (like test coverage), instead of focussing on design feedback as the main goal.</p>
 </li>
 <li>
-<p><strong>Increase in build time</strong>: Applications grow and so did the number of tests and pretty soon the build takes more than 10 min (a high threshold for the good test suite) and this time starts adding for every check-in and slows the overall process down. Key reasons for the increase in build time are</p>
+<p><strong>Trigger for a new test</strong>: Often the trigger to write a new test is a new class or a new method, rather than a new requirement.
+This failure to identify the right unit under test leads to a tight coupling between the tests and the code. The tests should be driving the public contract of the system under test and the rest of the codebase.</p>
+</li>
+<li>
+<p><strong>Tests interfering with refactoring</strong>: This goes against the core promise of TDD and leaves developers very disheartened.</p>
 <ul>
-<li>Attachment to the existing Tests: Developers see the tests as some sort of investment and hence never deletes old/obsolete/repeated test cases.</li>
-<li>Slow Test: Test taking a sec to run looks fast but are indeed very slow . 1000 such test would take close to 16 min to run.</li>
-<li>Not able to run in Parallel: In lage projects with more than 20K+ tests, team will have to make investments to run the whole test suite in paralle.</li>
+<li>This typically happens when tests are written ex post facto, rather than upfront.</li>
+<li>Also, tests, where mocking is heavily used, can become very brittle as the implementation details leak into the test code.</li>
+</ul>
+<p><img src="/images/damian_mocking_fairy.png" alt="Damian tweet - Mocking"></p>
+</li>
+<li>
+<p><strong>Test Readability</strong>: Sometimes it becomes difficult to understand the intent behind a test refuting the basic premise of having tests as documentation.</p>
+</li>
+<li>
+<p><strong>Over Testing</strong>: When testing is done in layers, with the outer layer testing the internal implementation of inner layers - e.g. <em>End-to-End Test</em> &ndash;&gt; <em>Functional Test</em> &ndash;&gt; <em>Service Test</em> &ndash;&gt; <em>Repository Test</em> - it can lead to one single change resulting in multiple test failures. Ideally, any part of the code, should be covered by two tests, one unit and another End-to-End.</p>
+</li>
+<li>
+<p><strong>Increase in build time</strong>: As applications grow, so do the number of tests, which thereby increases the overall build time and slows down the dev feedback cycle.
+Typically this is due to multiple reasons -</p>
+<ul>
+<li>Not pruning test suite: Its important to treat tests at par with the main codebase and refactor or even delete any old/obsolete/redundant test cases.</li>
+<li>Slow Tests: Tests require regular investment to keep it fast - e.g. by using patterns like in-memory dependencies (databases, messaging, IO)</li>
+<li>Not able to run in Parallel: In large projects with several thousand tests, teams should invest in ensuring the whole test suite runs in parallel.</li>
 </ul>
 </li>
 <li>
-<p><strong>Randomness in tests</strong>: Test fails randomly i.e on rerun the build passes and the team members gets into the habit of running the build again. Rather than fixing the underlying issues, randomness adds over time and the test suite becomes more like a coin toss, rather than a tool to give feedback.</p>
+<p><strong>Test Flakiness</strong>: Tests failing randomly leads to erosion in the team&rsquo;s confidence on the test suite, making it look like a coin toss, rather than a tool to give meaningful feedback. This makes it harder to reason if the failures are because of a genuine reason, or because of the inherent random nature of the test and this leads to the <a href="https://en.wikipedia.org/wiki/Broken_windows_theory" target="_blank" rel="noopener">broken window</a> phenomenon.</p>
 </li>
 <li>
-<p><strong>Long time to fix build failures</strong>: Due to the randomness, team members are not sure if the build is failing because of a new change, or it&rsquo;s down to randomness and this leads to red builds for long before a team members take a look.</p>
+<p><strong>Check-ins on Red builds</strong>: Once check-ins on already failing builds become the norm its pretty much downhill from there on.</p>
 </li>
-<li>
-<p><strong>Checkin on Red builds</strong>: As red build becomes the norm so is check-in on already failing build and from there it&rsquo;s all downhill.</p>
-</li>
-<li>
-<p><strong>Tests interfering with the refactoring</strong>: Tests written after the code is written, typically exhibit this problem, where the coupling between the test and code is very high.</p>
-<ul>
-<li>Inadvertently the test is testing the implmentation and not the functionality and this leads to tight coupling between test and the underlying code.</li>
-<li>Tests, where mocking is heavily used, can become very brittle. Normal refactoring to change the shape of code can lead to test failures .</li>
 </ul>
-</li>
-<li>
-<p><strong>Over Testing</strong>: Testing is done in layers, where the outer layer test tries to test the whole internal implementation ex: DAO Test, Services Test, Functional Test &amp; then End to End Test. This results in a common internal codebase (DAO layer) being covered by many-many tests and hence any change there can result in lots of failing tests. Ideally, any part of code should be covered by two tests, one is unit and another End-to-End and hence any change should only result in two failing tests.</p>
-</li>
-<li>
-<p><strong>Individuals not committed to TDD philosophy</strong>: TDD is a team sport and hence everyone in the team needs to adhere to the philosophy of writing tests first and then continuous refactoring. Even one member, not following these guidelines can create the above-mentioned problems for the entire team.</p>
-</li>
+<p>All of these problems combined make it difficult for teams and organizations to carry-on with the practice of TDD and leads general disillusionment around the practice itself. Without fixing the above issues, even forceful continuation of the practice will not result in better outcomes. So its imperative to fix the root cause to move ahead, in this journey.</p>
+<p>In the next few blog posts we would discuss how one can mitigate some of these challenges and set down a path forward.</p>
+<h3 id="references-">References :</h3>
+<ul>
+<li><a href="https://github.com/quii/learn-go-with-tests/blob/main/anti-patterns.md" target="_blank" rel="noopener">Summary of TDD Anti-patterns</a></li>
+<li><a href="https://www.youtube.com/watch?v=a6oP24CSdUg" target="_blank" rel="noopener">TDD for those who don&rsquo;t need it - GopherCon SG 2017</a></li>
+<li><a href="https://www.youtube.com/watch?v=EZ05e7EMOLM" target="_blank" rel="noopener">DevTernity 2017: Ian Cooper - TDD, Where Did It All Go Wrong</a></li>
 </ul>
 <ul class="pa0">
   
