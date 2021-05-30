@@ -34,15 +34,15 @@ So what is it about TDD that elicits such divisive opinions?
 In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://trade-offs.github.io/post/tdd_unfulfilled_promise/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-05-25T00:04:40&#43;00:00" />
-<meta property="article:modified_time" content="2021-05-25T00:04:40&#43;00:00" />
+<meta property="article:published_time" content="2021-05-27T00:04:40&#43;00:00" />
+<meta property="article:modified_time" content="2021-05-27T00:04:40&#43;00:00" />
 
 <meta itemprop="name" content="TDD - The Unfulfilled Promise">
 <meta itemprop="description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
 So what is it about TDD that elicits such divisive opinions?
-In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!"><meta itemprop="datePublished" content="2021-05-25T00:04:40&#43;00:00" />
-<meta itemprop="dateModified" content="2021-05-25T00:04:40&#43;00:00" />
-<meta itemprop="wordCount" content="895">
+In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!"><meta itemprop="datePublished" content="2021-05-27T00:04:40&#43;00:00" />
+<meta itemprop="dateModified" content="2021-05-27T00:04:40&#43;00:00" />
+<meta itemprop="wordCount" content="885">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TDD - The Unfulfilled Promise"/>
 <meta name="twitter:description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
@@ -154,7 +154,7 @@ In our experience, it&rsquo;s down to the benefits promised in theory but diffic
       <h1 class="f1 athelas mt3 mb1">TDD - The Unfulfilled Promise</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2021-05-25T00:04:40Z">May 25, 2021</time>
+      <time class="f6 mv4 dib tracked" datetime="2021-05-27T00:04:40Z">May 27, 2021</time>
 
       
       
@@ -188,11 +188,11 @@ While some, especially those coming from an XP background, believe it to be the 
 <h2 id="the-pitfalls">The Pitfalls</h2>
 <ul>
 <li>
-<p><strong>Alignment to TDD philosophy</strong>: TDD is a team sport and everyone in the team needs to be fully committed to the philosophy of writing tests first and doing continuous refactoring. Even one member, not adhering to these principles, can create problems for the entire team. Also, the problem compounds when a lot of developers get influenced by vanity metrics (like test coverage), instead of focussing on design feedback as the main goal.</p>
+<p><strong>Alignment to TDD philosophy</strong>: TDD is a team sport and everyone in the team needs to be fully committed to the philosophy of writing tests first and doing continuous refactoring. Even one member, not adhering to these principles, can create problems for the entire team. Also, the problem compounds when developers get influenced by vanity metrics (like test coverage), instead of focussing on design feedback as the main goal.</p>
 </li>
 <li>
 <p><strong>Trigger for a new test</strong>: Often the trigger to write a new test is a new class or a new method, rather than a new requirement.
-This failure to identify the right unit under test leads to a tight coupling between the tests and the code. The tests should be driving the public contract of the system under test and the rest of the codebase.</p>
+This failure to identify the right unit under test leads to a tight coupling between the tests and the main code. The tests should be driving the public contract of the system under test and the rest of the codebase.</p>
 </li>
 <li>
 <p><strong>Tests interfering with refactoring</strong>: This goes against the core promise of TDD and leaves developers very disheartened.</p>
@@ -203,29 +203,30 @@ This failure to identify the right unit under test leads to a tight coupling bet
 <p><img src="/images/damian_mocking_fairy.png" alt="Damian tweet - Mocking"></p>
 </li>
 <li>
-<p><strong>Test Readability</strong>: Sometimes it becomes difficult to understand the intent behind a test refuting the basic premise of having tests as documentation.</p>
+<p><strong>Test Readability</strong>: Sometimes it becomes difficult to understand the intent behind a test, refuting the basic premise of having tests as documentation.</p>
 </li>
 <li>
-<p><strong>Over Testing</strong>: When testing is done in layers, with the outer layer testing the internal implementation of inner layers - e.g. <em>End-to-End Test</em> &ndash;&gt; <em>Functional Test</em> &ndash;&gt; <em>Service Test</em> &ndash;&gt; <em>Repository Test</em> - it can lead to one single change resulting in multiple test failures. Ideally, any part of the code, should be covered by two tests, one unit and another End-to-End.</p>
+<p><strong>Over Testing</strong>: When testing is done in layers, with the outer layer testing the internal implementation of inner layers - e.g. <em>End-to-End Test</em> &ndash;&gt; <em>Functional Test</em> &ndash;&gt; <em>Service Test</em> &ndash;&gt; <em>Repository Test</em> - it can lead to one single change resulting in multiple test failures. Ideally, any part of the code, should be covered by two tests - one Unit and another End-to-End.</p>
 </li>
 <li>
 <p><strong>Increase in build time</strong>: As applications grow, so do the number of tests, which thereby increases the overall build time and slows down the dev feedback cycle.
 Typically this is due to multiple reasons -</p>
 <ul>
-<li>Not pruning test suite: Its important to treat tests at par with the main codebase and refactor or even delete any old/obsolete/redundant test cases.</li>
-<li>Slow Tests: Tests require regular investment to keep it fast - e.g. by using patterns like in-memory dependencies (databases, messaging, IO)</li>
-<li>Not able to run in Parallel: In large projects with several thousand tests, teams should invest in ensuring the whole test suite runs in parallel.</li>
+<li><strong><em>Not pruning test suite regularly</em></strong>: Its important to treat tests at par with the main codebase and refactor or even delete any obsolete or redundant test cases.</li>
+<li><strong><em>Slow Tests</em></strong>: Tests require regular investment to keep it fast - e.g. by using patterns like in-memory dependencies (for databases, messaging systems, IO layers etc.)</li>
+<li><strong><em>Not able to run in Parallel</em></strong>: In large projects with several thousand tests, teams should invest heavily on parallel execution of the tests.</li>
 </ul>
 </li>
 <li>
-<p><strong>Test Flakiness</strong>: Tests failing randomly leads to erosion in the team&rsquo;s confidence on the test suite, making it look like a coin toss, rather than a tool to give meaningful feedback. This makes it harder to reason if the failures are because of a genuine reason, or because of the inherent random nature of the test and this leads to the <a href="https://en.wikipedia.org/wiki/Broken_windows_theory" target="_blank" rel="noopener">broken window</a> phenomenon.</p>
+<p><strong>Test Flakiness</strong>: Tests failing randomly leads to erosion in the team&rsquo;s confidence on the suite, making it look like a coin toss, rather than a tool to give meaningful feedback. This makes it harder to reason if the failures are because of a genuine reason, or because of the inherent random nature of the suite, leading to the <a href="https://en.wikipedia.org/wiki/Broken_windows_theory" target="_blank" rel="noopener">broken window</a> phenomenon.</p>
 </li>
 <li>
-<p><strong>Check-ins on Red builds</strong>: Once check-ins on already failing builds become the norm its pretty much downhill from there on.</p>
+<p><strong>Check-ins on Red builds</strong>: Once check-ins on already failing builds become the norm its pretty much downhill from there on.
+<img src="/images/dead_end.svg" alt="Dead end"></p>
 </li>
 </ul>
-<p>All of these problems combined make it difficult for teams and organizations to carry-on with the practice of TDD and leads general disillusionment around the practice itself. Without fixing the above issues, even forceful continuation of the practice will not result in better outcomes. So its imperative to fix the root cause to move ahead, in this journey.</p>
-<p>In the next few blog posts we would discuss how one can mitigate some of these challenges and set down a path forward.</p>
+<p>All of these problems make it difficult for teams and organizations to carry on with the practice of TDD and leads to general disillusionment around the practice itself. Without fixing the above issues, even forceful continuation of the practice will not result in better outcomes.</p>
+<p>In the next few blog posts we would discuss how one can mitigate some of these challenges and set down a long-term sustainable path forward.</p>
 <h3 id="references-">References :</h3>
 <ul>
 <li><a href="https://github.com/quii/learn-go-with-tests/blob/main/anti-patterns.md" target="_blank" rel="noopener">Summary of TDD Anti-patterns</a></li>

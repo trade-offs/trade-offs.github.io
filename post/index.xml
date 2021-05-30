@@ -10,12 +10,23 @@
     <item>
       <title>TDD - The Unfulfilled Promise</title>
       <link>https://trade-offs.github.io/post/tdd_unfulfilled_promise/</link>
-      <pubDate>Tue, 25 May 2021 00:04:40 +0000</pubDate>
+      <pubDate>Thu, 27 May 2021 00:04:40 +0000</pubDate>
       
       <guid>https://trade-offs.github.io/post/tdd_unfulfilled_promise/</guid>
       <description>There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
 So what is it about TDD that elicits such divisive opinions?
 In our experience, it&amp;rsquo;s down to the benefits promised in theory but difficult to materialize in practice!</description>
+    </item>
+    
+    <item>
+      <title>About us!</title>
+      <link>https://trade-offs.github.io/post/about_us/</link>
+      <pubDate>Tue, 25 May 2021 00:04:40 +0000</pubDate>
+      
+      <guid>https://trade-offs.github.io/post/about_us/</guid>
+      <description>Software development is inherently hard. Over time, we as a group, learnt and aligned on a lot of basic principles and wanted a channel to share it with the world. This blog is an outcome of these shared beliefs.
+Who Are We
+ Sanjiv Kumar Kuldeep Singh Puneet Bhardwaj  Though we have a combined experience of around 5 decades, we still consider ourselves as journeymen in this road to building maintainable software.</description>
     </item>
     
   </channel>
