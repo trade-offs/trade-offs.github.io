@@ -30,7 +30,7 @@
     
     <meta property="og:title" content="TDD - The Unfulfilled Promise" />
 <meta property="og:description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
-So what is it about TDD that elicits such divisive opinions?
+ So what is it about TDD that elicits such divisive opinions?
 In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://trade-offs.github.io/post/tdd_unfulfilled_promise/" /><meta property="article:section" content="post" />
@@ -39,14 +39,14 @@ In our experience, it&rsquo;s down to the benefits promised in theory but diffic
 
 <meta itemprop="name" content="TDD - The Unfulfilled Promise">
 <meta itemprop="description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
-So what is it about TDD that elicits such divisive opinions?
+ So what is it about TDD that elicits such divisive opinions?
 In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!"><meta itemprop="datePublished" content="2021-05-27T00:04:40&#43;00:00" />
 <meta itemprop="dateModified" content="2021-05-27T00:04:40&#43;00:00" />
-<meta itemprop="wordCount" content="885">
+<meta itemprop="wordCount" content="901">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TDD - The Unfulfilled Promise"/>
 <meta name="twitter:description" content="There are few things that divide the software community as much as the practice of Test Driven Development (TDD). While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.
-So what is it about TDD that elicits such divisive opinions?
+ So what is it about TDD that elicits such divisive opinions?
 In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!"/>
 
 	
@@ -161,7 +161,10 @@ In our experience, it&rsquo;s down to the benefits promised in theory but diffic
     </header>
     <div class="nested-copy-line-height lh-copy roboto f5 nested-links nested-img mid-gray pr4-l w-100-l"><p>There are few things that divide the software community as much as the practice of Test Driven Development (TDD).
 While some, especially those coming from an XP background, believe it to be the software development equivalent of sliced bread, others believe its a sheer waste of time.</p>
-<p><img src="/images/tdd_search.png" alt="https://www.google.com/search?q=test+driven+development+is&safe=strict" title="TDD - Search Google"></p>
+<p><figure><img src="/images/tdd_search.png" width="300px"/>
+</figure>
+
+<!-- raw HTML omitted --></p>
 <p>So what is it about TDD that elicits such divisive opinions?</p>
 <p>In our experience, it&rsquo;s down to the benefits promised in theory but difficult to materialize in practice!</p>
 <p>Before we delve into the challenges around making TDD work in a team, lets look at some of those promised benefits.</p>
@@ -200,7 +203,9 @@ This failure to identify the right unit under test leads to a tight coupling bet
 <li>This typically happens when tests are written ex post facto, rather than upfront.</li>
 <li>Also, tests, where mocking is heavily used, can become very brittle as the implementation details leak into the test code.</li>
 </ul>
-<p><img src="/images/damian_mocking_fairy.png" alt="Damian tweet - Mocking"></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Everytime a mock returns a mock a fairy dies</p>&mdash; Damian Guy (@damianguy) <a href="https://twitter.com/damianguy/status/4977743956?ref_src=twsrc%5Etfw">October 18, 2009</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </li>
 <li>
 <p><strong>Test Readability</strong>: Sometimes it becomes difficult to understand the intent behind a test, refuting the basic premise of having tests as documentation.</p>
@@ -222,7 +227,9 @@ Typically this is due to multiple reasons -</p>
 </li>
 <li>
 <p><strong>Check-ins on Red builds</strong>: Once check-ins on already failing builds become the norm its pretty much downhill from there on.
-<img src="/images/dead_end.svg" alt="Dead end"></p>
+<figure><img src="/images/dead_end.jpg" height="400px"/>
+</figure>
+</p>
 </li>
 </ul>
 <p>All of these problems make it difficult for teams and organizations to carry on with the practice of TDD and leads to general disillusionment around the practice itself. Without fixing the above issues, even forceful continuation of the practice will not result in better outcomes.</p>
